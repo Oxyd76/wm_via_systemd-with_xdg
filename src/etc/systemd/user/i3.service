@@ -1,0 +1,16 @@
+[Unit]
+Description=i3wm tiling window manager for X
+Documentation=man:i3(5)
+Wants=graphical-session-pre.target
+After=graphical-session-pre.target
+BindsTo=graphical-session.target
+PartOf=graphical-session.target
+Before=xdg-desktop-autostart.target
+Wants=xdg-desktop-autostart.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dbus-launch --sh-syntax --exit-with-session i3 --shmlog-size 0
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10

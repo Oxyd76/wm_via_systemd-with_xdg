@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=i3 via systemd
+Comment=improved dynamic tiling window manager
+Exec=i3-service
+TryExec=i3-service
+Type=Application
+X-LightDM-DesktopName=i3
+DesktopNames=i3
+Keywords=tiling;wm;windowmanager;window;manager;
